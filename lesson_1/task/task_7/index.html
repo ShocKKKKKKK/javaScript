@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      font-size: 14px;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th,
+    td:first-child {
+      background: #AFCDE7;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    th,
+    td {
+      border-style: solid;
+      border-width: 0 1px 1px 0;
+      border-color: white;
+    }
+
+    td {
+      background: #D8E6F3;
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та
+    загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+  </h2>
+
+  <script>
+    let cost1 = parseFloat(prompt('Введите стоимость первого товара'));
+    let quantyty1 = parseFloat(prompt('Введите количество первого товара'));
+    let result1;
+    let cost2 = parseFloat(prompt('Введите стоимость второго товара'));
+    let quantyty2 = parseFloat(prompt('Введите количество второго товара'));
+    let result2;
+    let cost3 = parseFloat(prompt('Введите стоимость третьего товара'));
+    let quantyty3 = parseFloat(prompt('Введите количество третьего товара'));
+    let result3;
+    let resSumm;
+    document.write(`
+    <table>
+<tr>
+  <th>Товар</th>
+  <th>Стоимость</th>
+  <th>количество</th>
+  <th>Сумма</th>
+  </tr>
+ <tr>
+  <td>Молоко</td>
+  <td>${cost1}</td>
+  <td>${quantyty1}</td>
+  <td>${result1 = cost1 * quantyty1}</td>
+ </tr>
+<tr>
+  <td>Сметана</td>
+  <td> ${cost2}</td>
+  <td>${quantyty2}</td>
+  <td>${result2 = cost2 * quantyty2}</td>
+</tr>
+<tr>
+  <td>Творог</td>
+  <td> ${cost3}</td>
+  <td>${quantyty3}</td>
+  <td>${result3 = cost3 * quantyty3}</td>
+</tr>
+<tr>
+  <td>Общая стоимость</td>
+  <td></td>
+  <td></td>
+  <td>${resSumm = result1 + result2 + result3}</td>
+</tr>
+</table>
+    `);
+  </script>
+</body>
+
+</html>
